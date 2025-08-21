@@ -11,3 +11,7 @@ end
 
 gem 'github-pages'
 gem 'connection_pool', '2.5.0'
+
+gem 'tzinfo-data'
+gem "jekyll-livereload"
+gem "jekyll-watch", "~> 2.2"
