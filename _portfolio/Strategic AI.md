@@ -44,7 +44,7 @@ Controls core game simulation parameters:
     <div>1x Simulation Speed</div>
   </div>
   <div style="text-align: center;">
-    <img src="/images/Strategic_AI/Fast_Simulation.gif" width="300" />
+    <img src="/images/Strategic_AI/Fast_simulation.gif" width="300" />
     <div>25x Simulation Speed</div>
   </div>
 </div>
