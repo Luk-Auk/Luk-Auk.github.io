@@ -1,14 +1,14 @@
 ---
 title: "ENet Multiplayer in C++"
-excerpt: "Adding multiplayer support to an OpenGL game <br/><img src='/images/ENet_Multiplayer/ENet_FrontPage.gif' width='500' height='300'>"
+excerpt: "Adding multiplayer support to an OpenGL game <br/><img src='/images/ENet_Multiplayer/ENet_FrontPage.gif' style='width:500px !important; height:300px !important; object-fit:cover;'>" 
 collection: portfolio
 ---
 
-This project is about adding multiplayer support to a pre-existing work in progress game (fancy way of saying the game had missing core gameplay elements that would need to be added 😅). The game is written in C++ using <a href="https://en.wikipedia.org/wiki/OpenGL" target="_blank"> OpenGL</a> and networking is handled using <a href="http://enet.bespin.org/" target="_blank"> ENet</a> with <a href="https://flatbuffers.dev/" target="_blank"> Flatbuffers</a>.
+This project is about adding multiplayer support to a pre-existing work in progress game (fancy way of saying the game had missing core gameplay elements that would need to be added 😅). The game is written in C++ using [OpenGL](https://en.wikipedia.org/wiki/OpenGL) and networking is handled using [ENet](http://enet.bespin.org/) with [Flatbuffers](https://flatbuffers.dev/).
 
 ## Project Structure  
 
-The project follows a <a href="https://en.wikipedia.org/wiki/OpenGL" target="_blank"> Client-Server architecture</a>, where the Server has authority over Clients. 
+The project follows a [Client-Server](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) architecture, where the Server has authority over Clients. 
 Basically there are **two** independent projects: the **Server** is a barebones version of the game that runs the simulation while the **Client** only sends its input.
 
 <div style="display: flex; align-items: flex-start; gap: 10px;">
@@ -27,12 +27,13 @@ Basically there are **two** independent projects: the **Server** is a barebones 
 
 Clients only send their input while the server is in-charge of processing them and updating player position and orientation.
 
-
-
-<video width="600" autoplay muted loop>
-<source src="/files/ENet_Multiplayer/Input.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div style="text-align: center;">
+  <video width="600" autoplay muted loop controls>
+    <source src="/files/ENet_Multiplayer/Input.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div>Sending Input</div>
+</div>
 
 ### 🎮 Gamestate
 
@@ -51,11 +52,13 @@ When a new player joins, they receive the most up-to-date game state packet:
   - `direction`  
   - `lifespan`
 
-<video width="600" controls autoplay muted loop>
-<source src="/files/ENet_Multiplayer/GameState.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
+<div style="text-align: center;">
+  <video width="600" autoplay muted loop controls>
+    <source src="/files/ENet_Multiplayer/GameState.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div>Receiving Gamestage packet when connected</div>
+</div>
 ---
 
 ### 👤 SpawnPlayer
@@ -70,10 +73,13 @@ Instead of sending **Gamestate** packet to already connected players they receiv
   - `acceleration`  
   - `player_id`
 
-<video width="600" autoplay muted loop>
-<source src="/files/ENet_Multiplayer/Spawn.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div style="text-align: center;">
+  <video width="600" autoplay muted loop controls>
+    <source src="/files/ENet_Multiplayer/Spawn.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div>Receiving SpawnPlayer packet when someone connects</div>
+</div>
 
 ---
 
@@ -83,10 +89,13 @@ Packet containing the player_id that has disconnected
 - Data included:
   - `player_id`
 
-<video width="600" autoplay muted loop>
-<source src="/files/ENet_Multiplayer/Despawn.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div style="text-align: center;">
+  <video width="600" autoplay muted loop controls>
+    <source src="/files/ENet_Multiplayer/Despawn.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div>Receiving DespawnPlayer packet when someone disconnects</div>
+</div>
 
 ---
 
@@ -102,10 +111,15 @@ The most frequently sent packet containing new other player positions/orientatio
 
 *This data is used for Dead Reckoning*
 
-<video width="600" autoplay muted loop>
-<source src="/files/ENet_Multiplayer/Update.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
+
+<div style="text-align: center;">
+  <video width="600" autoplay muted loop controls>
+    <source src="/files/ENet_Multiplayer/Update.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div>Receiving UpdatePlayer packet every tick </div>
+</div>
 
 ---
 
@@ -119,10 +133,13 @@ Teleports a player to a specific position (used when colliding with objects or g
 
 *Velocity and acceleration are just set to 0*
 
-<video width="600" autoplay muted loop>
-<source src="/files/ENet_Multiplayer/Teleport.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div style="text-align: center;">
+  <video width="600" autoplay muted loop controls>
+    <source src="/files/ENet_Multiplayer/Teleport.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div>Receiving TeleportPlayer packet upon collision </div>
+</div>
 
 ---
 
@@ -135,10 +152,13 @@ Spawns a laser in a given direction with a defined lifespan.
   - `life_time`
   - `lazer_id` 
 
-<video width="600" autoplay muted loop>
-<source src="/files/ENet_Multiplayer/Spawn_Lazer.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div style="text-align: center;">
+  <video width="600" autoplay muted loop controls>
+    <source src="/files/ENet_Multiplayer/Spawn_Lazer.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div>Receiving SpawnLaser </div>
+</div>
 
 ---
 
@@ -151,17 +171,17 @@ Removes a laser from the game using its unique ID.
 ---
 
 ### 📶 Dead Reckoning 
-A technique called <a href="https://www.researchgate.net/publication/293809946_Believable_Dead_Reckoning_for_Networked_Games" target="_blank"> Dead Reckoning</a> is used to reduce the effects of latency by ensuring game state remains responsive and fluid from player's perspective.
+A technique called [Dead Reckoning](https://www.researchgate.net/publication/293809946_Believable_Dead_Reckoning_for_Networked_Games) is used to reduce the effects of latency by ensuring game state remains responsive and fluid from player's perspective.
 
-The video below showcases gameplay under **400ms packet delay** and **10% packet loss** network conditions using <a href="https://jagt.github.io/clumsy/index.html" target="_blank"> clumsy</a>.
+The video below showcases gameplay under **400ms packet delay** and **10% packet loss** network conditions using [clumsy](https://jagt.github.io/clumsy/index.html).
 
-<video width="600" controls>
-    <source src="/files/ENet_Multiplayer/Deadreckoning.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<div style="text-align: center;">
+  <video width="600" autoplay muted loop controls>
+      <source src="/files/ENet_Multiplayer/Deadreckoning.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+</div>
 
 ---
 
 *The full protocol document: [.pdf](/files/ENet_Multiplayer/Protocol_v1.4.pdf "Click to view the protocol document")* 
-
-<!-- Source code available upon request (I think they still use this as a course assignment) -->

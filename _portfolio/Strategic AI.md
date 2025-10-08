@@ -1,12 +1,12 @@
 ---
 title: "Strategic AI"
-excerpt: "Finite state machine managing workers, resources, and world exploration <br/><img src='/images/Strategic_AI/Strategic_AI_FrontPage.gif' width='500' height='300'>"
+excerpt: "Finite state machine managing workers, resources and world exploration <br/><img src='/images/Strategic_AI/Strategic_AI_FrontPage.gif' style='width:500px !important; height:300px !important; object-fit:cover;'>" 
+
 collection: portfolio
 ---
 
----
-This project is about creating a strategic AI by implementing a <a href="https://en.wikipedia.org/wiki/Finite-state_machine" target="_blank"> finite state-machine</a> that makes dynamic decisions. The AI handles world exploration, resource gathering and transportation, building and production.
-Developed using <a href="https://angelscript.hazelight.se/" target="_blank">Haze light unreal engine v5.1.1</a> without relying on built-in AI modules.
+This project is about creating a strategic AI by implementing a  [finite state-machine](https://en.wikipedia.org/wiki/Finite-state_machine) that makes dynamic decisions. The AI handles world exploration, resource gathering and transportation, building and production.
+Developed using [Haze light unreal engine v5.1.1](https://angelscript.hazelight.se/) without relying on built-in AI modules.
 
 ## Project Structure  
 
@@ -62,7 +62,7 @@ Controls all the agents (workers, wanderers, builders, coal mill workers) and ma
 - 🔨 **Building** – Do we have enough wood to start building? Yes -> builds.  
 
 <div style="text-align: center;">
-  <video width="600" controls>
+  <video width="600" autoplay muted loop controls>
     <source src="/files/Strategic_AI/Strategic_AI_Demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -72,9 +72,11 @@ Controls all the agents (workers, wanderers, builders, coal mill workers) and ma
 ## 🛠️ Technical Details  
 
  - 🌐 **Map Size** - 100×100 tile grid with movement costs and terrain types.  
- - 🧭 **Pathfinding** - <a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="_blank">A* Path finding algorithm</a> to navigate between tiles.  
+ - 🧭 **Pathfinding** - [A* Path finding algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) to navigate between tiles.  
  - 📝 **Editable Parameters** - Production times, resource values and terrain travel times can be changed.
 
 ---
 
-<a href="https://drive.google.com/file/d/19BX4hkLCzrVc2WmQ9S_dqxClKyHmWsRs/view?usp=drive_link" target="_blank">[Project download]</a>
+[Project download](https://drive.google.com/file/d/19BX4hkLCzrVc2WmQ9S_dqxClKyHmWsRs/view?usp=drive_link)
+
+

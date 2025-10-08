@@ -1,20 +1,19 @@
 ---
 title: "Graphics Engine"
-excerpt: "Custom 3D engine with math library, mesh loading, lighting and deferred shading <br/><img src='/images/Graphics_Engine/Graphics_Engine_FrontPage.gif' width='500' height='300'>"
+excerpt: "Custom 3D graphics engine with mesh loading, lighting and deferred shading <br/><img src='/images/Graphics_Engine/Graphics_Engine_FrontPage.gif' style='width:500px !important; height:300px !important; object-fit:cover;'>" 
 collection: portfolio
 ---
 
-This project is about building a custom 3D graphics engine in C++ with a pre-existing framework that included OpenGL and a basic pipeline rendering and empty window.
+This project is about building a custom 3D graphics engine in C++ with a pre-existing framework that included [OpenGL](https://en.wikipedia.org/wiki/OpenGL) and a basic rendering pipeline to have an empty window to start with.
 
 ## Project Structure
 
-The project was developed iteratively, each major feature is a seperate C++ project this makes testing independent features a lot easier (For assignment grading purposes).
+The project was developed iteratively, each major feature is a separate C++ project this makes testing independent features a lot easier.
 
 ---
 
 ### Math Library
-
-One of the core  requirements were to implement a custom math library instead of relying on GLM.
+One of the core  requirements were to implement a custom math library instead of relying on [GLM](https://www.opengl.org/sdk/libs/GLM/).
 Custom `vec3`, `vec4` and `mat4` classes handle all vector and matrix calculations used in the engine.
 
 ---
@@ -33,12 +32,14 @@ Supports basic 2D geometry as well as 3D geometry with textures.
     <div style="text-align: center;">
       <video width="300" height="170" autoplay muted loop playsinline>
         <source src="/files/Graphics_Engine/Brick_Texture.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       <div>Brick Cube</div>
     </div>
     <div style="text-align: center;">
       <video width="300" height="170" autoplay muted loop playsinline>
         <source src="/files/Graphics_Engine/Forest_Texture.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       <div>Forest Cube</div>
     </div>
@@ -49,18 +50,20 @@ Supports basic 2D geometry as well as 3D geometry with textures.
 ---
 
 ### Model Loading
-Model loading without external libraries 
+Model loading without external libraries like [tinygltf](https://github.com/syoyo/tinygltf).
 
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
   <div style="text-align: center;">
     <video width="300" height="170" autoplay muted loop playsinline>
       <source src="/files/Graphics_Engine/gltf.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div>GLTF</div>
   </div>
   <div style="text-align: center;">
     <video width="300" height="170" autoplay muted loop playsinline>
       <source src="/files/Graphics_Engine/obj.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div>OBJ</div>
   </div>
@@ -69,18 +72,20 @@ Model loading without external libraries
 ---
 
 ### Lighting
-Custom lighting system 
+Custom lighting system.
 
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
   <div style="text-align: center;">
     <video width="300" height="170" autoplay muted loop playsinline>
       <source src="/files/Graphics_Engine/PointLight.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div>Point Light</div>
   </div>
   <div style="text-align: center;">
     <video width="300" height="170" autoplay muted loop playsinline>
       <source src="/files/Graphics_Engine/DirectionalLight.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div>Directional Light (Sun)</div>
   </div>
@@ -89,7 +94,7 @@ Custom lighting system
 ---
 
 ### Normal Maps
-Normal map support to improve surface details
+[Normal Map](https://learnopengl.com/Advanced-Lighting/Normal-Mapping) support to improve surface details.
 
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
   <div style="text-align: center;">
@@ -101,6 +106,7 @@ Normal map support to improve surface details
   <div style="text-align: center;">
     <video width="300" height="170" autoplay muted loop playsinline>
       <source src="/files/Graphics_Engine/NormalMap.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div>Normal Tangent Mirror Test</div>
   </div>
@@ -111,7 +117,7 @@ Normal map support to improve surface details
 
 ### Deferred Shading
 
-Deferred shading pipeline to render scenes with thousands of point lights.  
+[Deferred shading](https://learnopengl.com/Advanced-Lighting/Deferred-Shading) pipeline to render scenes with thousands of point lights.
 
 Visualizing the G-buffer textures and the final render, along with a short demo:
 
@@ -144,6 +150,7 @@ Visualizing the G-buffer textures and the final render, along with a short demo:
   <div style="text-align: center;">
     <video width="400" autoplay muted loop>
       <source src="/files/Graphics_Engine/Deferred_Shading.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div>Deferred Shading Demo</div>
   </div>
