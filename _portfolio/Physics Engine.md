@@ -1,6 +1,6 @@
 ---
 title: "Physics Engine"
-excerpt: "Custom physics engine with ray picking, dynamics and collision response <br/><img src='/images/Physics_Engine/cube_rain.gif' style='width:500px !important; height:300px !important; object-fit:cover;'>" 
+excerpt: "Custom physics engine with ray picking, dynamics and collision response <br/><img src='/images/Physics_Engine/Physics_Engine_FrontPage.gif' style='width:500px !important; height:300px !important; object-fit:cover;'>" 
 collection: portfolio
 ---
 
